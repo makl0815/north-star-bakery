@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact and Pre-Orders | North Star Bakery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <img src="media/bakery-logo_c.png" alt="North Star Bakery logo: a bread loaf with wheat stalks">
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" aria-current="page">Contact and Pre-Orders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Contact and Pre-Orders</h1>
+    <p>Send us a pre-order request or a question. We reply by email, usually within one business day.</p>
+
+    <section>
+      <h2>Pre-order or ask a question</h2>
+      <!-- No backend in this task, so the form posts back to this page -->
+      <form action="#" method="post">
+        <p>Fields marked "(required)" must be filled in before you send the form.</p>
+
+        <fieldset>
+          <legend>Your details</legend>
+          <p>
+            <label for="name">Name (required)</label><br>
+            <input type="text" id="name" name="name" autocomplete="name" minlength="2" required>
+          </p>
+          <p>
+            <label for="email">Email (required)</label><br>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your request</legend>
+          <p>
+            <label for="request-type">Request type (required)</label><br>
+            <select id="request-type" name="request-type" required>
+              <option value="">Choose a request type</option>
+              <option value="pre-order">Pre-order</option>
+              <option value="question">General question</option>
+              <option value="event">Event or catering order</option>
+            </select>
+          </p>
+          <p>
+            <label for="pickup-date">Pickup date (needed for pre-orders)</label><br>
+            <input type="date" id="pickup-date" name="pickup-date">
+          </p>
+          <p>
+            <label for="item-details">Item details or your question (required)</label><br>
+            <textarea id="item-details" name="item-details" rows="4" cols="40" minlength="5" maxlength="500" required></textarea>
+          </p>
+          <p>
+            <label for="allergies">Allergy notes (optional)</label><br>
+            <textarea id="allergies" name="allergies" rows="2" cols="40" maxlength="300"></textarea>
+          </p>
+        </fieldset>
+
+        <p><button type="submit">Send request</button></p>
+      </form>
+    </section>
+
+    <section>
+      <h2>Find us</h2>
+      <address>
+        North Star Bakery<br>
+        48 Harbor Lane<br>
+        Northfield
+      </address>
+      <p>We are a short walk from the Harbor Lane bus stop, and street parking is available on the block.</p>
+    </section>
+
+    <section>
+      <h2>Hours of operation</h2>
+      <ul>
+        <li>Tuesday to Saturday: 7:00 AM to 5:00 PM</li>
+        <li>Sunday: 8:00 AM to 1:00 PM</li>
+        <li>Monday: closed</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>North Star Bakery, 48 Harbor Lane, Northfield</p>
+    <p>&copy; 2026 North Star Bakery</p>
+  </footer>
+</body>
+</html>

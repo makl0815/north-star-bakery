@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>North Star Bakery | Fresh Bread, Pastries, and Cakes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Lets keyboard and screen reader users skip the navigation -->
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <img src="media/bakery-logo_c.png" alt="North Star Bakery logo: a bread loaf with wheat stalks">
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact and Pre-Orders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Welcome to North Star Bakery</h1>
+    <p>Fresh bread, handmade pastries, and cakes baked every morning for our neighbors. Stop by on your way to work, pick something up for the family, or send us a pre-order for your next gathering.</p>
+    <img src="media/bakery-storefront_c.png" alt="North Star Bakery storefront with breads and pastries displayed on wooden shelves in the window">
+
+    <section>
+      <h2>Hear from our bakers</h2>
+      <audio controls preload="metadata">
+        <source src="media/bakery-welcome_c.mp3" type="audio/mpeg">
+        Your browser does not support audio playback. You can
+        <a href="media/bakery-welcome_c.mp3">download the welcome message from the North Star Bakery team</a>
+        instead.
+      </audio>
+    </section>
+
+    <section>
+      <h2>What we're known for</h2>
+      <ul>
+        <li>Slow-fermented sourdough and rustic loaves, baked fresh every morning</li>
+        <li>Handmade pastries and cookies made with real butter</li>
+        <li>Celebration cakes made to order</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Featured item of the week</h2>
+      <!-- Wide crop from 800px up, square crop on smaller screens -->
+      <picture>
+        <source media="(min-width: 800px)" srcset="media/bakery-feature-large_c.png">
+        <img src="media/bakery-feature-small_c.png" alt="Trays of freshly baked chocolate chunk and sugar-topped cookies in the bakery display case">
+      </picture>
+      <h3>Chocolate Chunk Cookies</h3>
+      <p>Thick, chewy, and loaded with dark chocolate. Available this week only, while the trays last.</p>
+    </section>
+
+    <section>
+      <h2>Hours and location</h2>
+      <p>48 Harbor Lane, Northfield</p>
+      <ul>
+        <li>Tuesday to Saturday: 7:00 AM to 5:00 PM</li>
+        <li>Sunday: 8:00 AM to 1:00 PM</li>
+        <li>Monday: closed</li>
+      </ul>
+      <p><a href="contact.html">Send a pre-order request or question</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>North Star Bakery, 48 Harbor Lane, Northfield</p>
+    <p>&copy; 2026 North Star Bakery</p>
+  </footer>
+</body>
+</html>
