@@ -247,6 +247,86 @@ button:hover {
   border-color: var(--charcoal);
 }
 
+/* Favorites and form feedback (JavaScript) */
+#favorites {
+  padding: 1rem;
+  border: 2px solid var(--peach);
+  border-radius: 0.5rem;
+}
+
+#favorites h2:focus {
+  outline: none;
+}
+
+#favorites-list {
+  margin-bottom: 1rem;
+}
+
+#favorites-list li,
+[data-product] {
+  margin-bottom: 0.5rem;
+}
+
+.favorite-btn,
+.remove-btn,
+#clear-favorites {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  color: var(--brown);
+  background: var(--cream);
+  border-color: var(--brown);
+}
+
+.favorite-btn:hover,
+.remove-btn:hover,
+#clear-favorites:hover {
+  color: var(--charcoal);
+  background: var(--peach);
+  border-color: var(--brown);
+}
+
+.favorite-btn[aria-pressed="true"] {
+  color: var(--cream);
+  background: var(--brown);
+}
+
+.favorite-btn[aria-pressed="true"]:hover {
+  color: var(--cream);
+  background: var(--charcoal);
+}
+
+[role="status"]:empty {
+  margin: 0;
+}
+
+[role="status"]:not(:empty) {
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  border: 2px solid var(--brown);
+  border-radius: 0.5rem;
+}
+
+.error {
+  display: block;
+  margin-top: 0.25rem;
+  font-weight: 700;
+}
+
+.error:not(:empty) {
+  padding-left: 0.5rem;
+  border-left: 4px solid var(--peach);
+}
+
+.error:not(:empty)::before {
+  content: "Error: ";
+}
+
+[aria-invalid="true"] {
+  border-width: 3px;
+  border-color: var(--charcoal);
+  outline: 2px solid var(--peach);
+}
+
 /* Footer */
 footer {
   padding: 1.5rem 1rem;
@@ -278,6 +358,10 @@ footer p {
 
   main > section {
     flex: 1 1 calc(50% - 1rem);
+  }
+
+  main > #favorites {
+    flex-basis: 100%;
   }
 
   main > img {

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products | North Star Bakery</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a href="#main">Skip to main content</a>
@@ -25,14 +26,25 @@
     <h1>Our Breads, Pastries, and Cakes</h1>
     <p>Everything is baked in small batches, so favorites can sell out by afternoon. Prices are ranges and depend on size. There is no online checkout: <a href="contact.html">send a pre-order request</a> and we will confirm your pickup.</p>
 
+    <section id="favorites">
+      <h2 tabindex="-1">My pre-order favorites</h2>
+      <p id="favorites-empty">You have not saved any favorites yet. Use the Favorite buttons below to build a list for your pre-order.</p>
+      <ul id="favorites-list"></ul>
+      <p id="favorites-actions" hidden>
+        <a href="contact.html">Send a pre-order request with these items</a>
+        <button type="button" id="clear-favorites">Clear favorites</button>
+      </p>
+      <p id="favorites-status" role="status"></p>
+    </section>
+
     <section>
       <h2>Breads</h2>
       <p>Price range: $6 to $12 per loaf</p>
       <img src="media/bakery-bread_c.png" alt="Crusty sourdough and country loaves stacked behind the glass of the bakery bread case">
       <ul>
-        <li><strong>Country sourdough:</strong> open crumb and a crisp, blistered crust</li>
-        <li><strong>Seeded whole grain:</strong> hearty and good for sandwiches</li>
-        <li><strong>Baguettes:</strong> baked in the morning and again at noon</li>
+        <li data-product="country-sourdough"><strong>Country sourdough:</strong> open crumb and a crisp, blistered crust</li>
+        <li data-product="seeded-whole-grain"><strong>Seeded whole grain:</strong> hearty and good for sandwiches</li>
+        <li data-product="baguettes"><strong>Baguettes:</strong> baked in the morning and again at noon</li>
       </ul>
       <figure>
         <img src="media/bakery-signature-loaf_c.png" alt="Dark, flour-dusted round loaf resting on a checkered kitchen towel">
@@ -44,9 +56,9 @@
       <h2>Pastries</h2>
       <p>Price range: $3 to $7 each</p>
       <ul>
-        <li><strong>Butter croissants:</strong> laminated by hand over two days</li>
-        <li><strong>Seasonal fruit danishes:</strong> made with fruit from nearby farms</li>
-        <li><strong>Cookies:</strong> chocolate chunk, brown sugar, and oatmeal</li>
+        <li data-product="butter-croissants"><strong>Butter croissants:</strong> laminated by hand over two days</li>
+        <li data-product="fruit-danishes"><strong>Seasonal fruit danishes:</strong> made with fruit from nearby farms</li>
+        <li data-product="cookies"><strong>Cookies:</strong> chocolate chunk, brown sugar, and oatmeal</li>
       </ul>
     </section>
 
@@ -54,9 +66,9 @@
       <h2>Cakes</h2>
       <p>Price range: $28 to $65 for a whole cake, $5 to $7 per slice</p>
       <ul>
-        <li><strong>Lemon poppy seed cake:</strong> light, with a tangy glaze</li>
-        <li><strong>Chocolate layer cake:</strong> dark chocolate sponge and ganache</li>
-        <li><strong>Custom celebration cakes:</strong> please order at least 48 hours ahead</li>
+        <li data-product="lemon-poppy-cake"><strong>Lemon poppy seed cake:</strong> light, with a tangy glaze</li>
+        <li data-product="chocolate-layer-cake"><strong>Chocolate layer cake:</strong> dark chocolate sponge and ganache</li>
+        <li data-product="custom-cakes"><strong>Custom celebration cakes:</strong> please order at least 48 hours ahead</li>
       </ul>
     </section>
   </main>

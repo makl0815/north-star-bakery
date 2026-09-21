@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact and Pre-Orders | North Star Bakery</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a href="#main">Skip to main content</a>
@@ -27,19 +28,22 @@
 
     <section>
       <h2>Pre-order or ask a question</h2>
-      <!-- No backend in this task, so the form posts back to this page -->
-      <form action="#" method="post">
+      <!-- novalidate hands error messages to script.js; there is no backend, so submit is handled there too -->
+      <form id="contact-form" action="#" method="post" novalidate>
         <p>Fields marked "(required)" must be filled in before you send the form.</p>
+        <p id="prefill-note" hidden></p>
 
         <fieldset>
           <legend>Your details</legend>
           <p>
             <label for="name">Name (required)</label><br>
-            <input type="text" id="name" name="name" autocomplete="name" minlength="2" required>
+            <input type="text" id="name" name="name" autocomplete="name" minlength="2" required aria-describedby="name-error">
+            <span class="error" id="name-error"></span>
           </p>
           <p>
             <label for="email">Email (required)</label><br>
-            <input type="email" id="email" name="email" autocomplete="email" required>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+            <span class="error" id="email-error"></span>
           </p>
         </fieldset>
 
@@ -47,20 +51,23 @@
           <legend>Your request</legend>
           <p>
             <label for="request-type">Request type (required)</label><br>
-            <select id="request-type" name="request-type" required>
+            <select id="request-type" name="request-type" required aria-describedby="request-type-error">
               <option value="">Choose a request type</option>
               <option value="pre-order">Pre-order</option>
               <option value="question">General question</option>
               <option value="event">Event or catering order</option>
             </select>
+            <span class="error" id="request-type-error"></span>
           </p>
           <p>
             <label for="pickup-date">Pickup date (needed for pre-orders)</label><br>
-            <input type="date" id="pickup-date" name="pickup-date">
+            <input type="date" id="pickup-date" name="pickup-date" aria-describedby="pickup-date-error">
+            <span class="error" id="pickup-date-error"></span>
           </p>
           <p>
             <label for="item-details">Item details or your question (required)</label><br>
-            <textarea id="item-details" name="item-details" rows="4" cols="40" minlength="5" maxlength="500" required></textarea>
+            <textarea id="item-details" name="item-details" rows="4" cols="40" minlength="5" maxlength="500" required aria-describedby="item-details-error"></textarea>
+            <span class="error" id="item-details-error"></span>
           </p>
           <p>
             <label for="allergies">Allergy notes (optional)</label><br>
@@ -69,6 +76,7 @@
         </fieldset>
 
         <p><button type="submit">Send request</button></p>
+        <p id="form-status" role="status"></p>
       </form>
     </section>
 
